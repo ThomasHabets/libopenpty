@@ -24,7 +24,8 @@ AC_CHECK_LIB([util], [openpty])
 AC_CHECK_FUNCS([socketpair openpty _getpty])
 
 # check for native
-AC_CHECK_FUNC([openpty], [AM_CONDITIONAL([HAVE_OPENPTY], [true])])
+AC_CHECK_FUNC([openpty], [have_openpty=yes], [have_openpty=no])
+AM_CONDITIONAL([HAVE_OPENPTY], [test x$have_openpty = xyes])
 
 # check for _getpty()-style
 have__getpty=no

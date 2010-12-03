@@ -4695,14 +4695,17 @@ fi
 { echo "$as_me:$LINENO: result: $ac_cv_func_openpty" >&5
 echo "${ECHO_T}$ac_cv_func_openpty" >&6; }
 if test $ac_cv_func_openpty = yes; then
-   if true; then
+  have_openpty=yes
+else
+  have_openpty=no
+fi
+
+ if test x$have_openpty = xyes; then
   HAVE_OPENPTY_TRUE=
   HAVE_OPENPTY_FALSE='#'
 else
   HAVE_OPENPTY_TRUE='#'
   HAVE_OPENPTY_FALSE=
-fi
-
 fi
 
 
