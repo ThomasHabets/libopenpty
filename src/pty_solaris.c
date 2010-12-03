@@ -97,10 +97,10 @@ openpty(int  *amaster, int *aslave, char *name,
  errout:
         saved_errno = errno;
         if (0 < fds) {
-                do_close(fds);
+                close(fds);
         }
         if (0 < fdm) {
-                do_close(fdm);
+                close(fdm);
         }
         if (name) {
                 *name = 0;
