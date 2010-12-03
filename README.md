@@ -33,6 +33,5 @@ Add to src/Makefile.am:
   myproghere_LDADD=../libopenpty/src/liblibopenpty.a
 
 
-
 --------------------------------------------------------------------------
 Send questions/suggestions/patches/rants/0days to synscan@googlegroups.com
