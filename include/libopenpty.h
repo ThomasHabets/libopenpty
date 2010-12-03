@@ -10,7 +10,17 @@
 extern "C" {
 #endif
 
-#include <pty.h>
+#ifdef HAVE_PTY_H
+#include<pty.h>
+#endif
+
+#ifdef HAVE_TERMIOS_H
+#include<termios.h>
+#endif
+
+#ifdef HAVE_UTIL_H
+#include<util.h>
+#endif
 
 int openpty(int *amaster, int *aslave, char *name,
 	    struct termios *termp, struct winsize *winp);

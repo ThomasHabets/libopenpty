@@ -16,6 +16,9 @@ AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_RANLIB
 
+# check for headers
+AC_CHECK_HEADERS([pty.h util.h termios.h])
+
 # Checks for library functions.
 AC_CHECK_LIB([util], [openpty])
 AC_CHECK_FUNCS([socketpair openpty _getpty])
