@@ -1,0 +1,12 @@
+*.o
+Makefile
+*.o
+*~
+config.h
+autom4te.cache/
+src/.deps/
+src/test_openpty
+stamp-h1
+config.log
+config.status
+*.a
