@@ -22,8 +22,10 @@ extern "C" {
 #include<util.h>
 #endif
 
+#ifndef HAVE_OPENPTY
 int openpty(int *amaster, int *aslave, char *name,
 	    struct termios *termp, struct winsize *winp);
+#endif
 
 
 #ifdef __cplusplus
