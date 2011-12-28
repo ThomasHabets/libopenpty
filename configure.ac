@@ -6,15 +6,15 @@ AC_PREREQ(2.61)
 AC_INIT([libopenpty], [0.01], [thomas@habets.pp.se])
 AC_CONFIG_AUX_DIR([config])
 AC_CANONICAL_TARGET
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([foreign subdir-objects])
 AM_MAINTAINER_MODE
+LT_INIT([dlopen])
 AC_CONFIG_SRCDIR([src/pty_common.c])
 AC_CONFIG_HEADER(config.h)
 
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_INSTALL
-AC_PROG_RANLIB
 
 # check for headers
 AC_CHECK_HEADERS([pty.h util.h termios.h])
@@ -58,7 +58,7 @@ AC_TYPE_UINT16_T
 AC_TYPE_UINT32_T
 
 # Output
-AC_CONFIG_FILES([Makefile src/Makefile])
+AC_CONFIG_FILES([Makefile libopenpty.pc])
 AC_OUTPUT
 
 echo "
