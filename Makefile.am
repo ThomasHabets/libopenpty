@@ -8,7 +8,8 @@ lib_LTLIBRARIES = libopenpty.la
 libopenpty_la_SOURCES = src/pty_common.c
 libopenpty_la_LDFLAGS = -version-info 0:0:0
 
-#library_include_HEADERS = something/foo.h something/bar.h
+library_includedir=$(includedir)
+library_include_HEADERS = include/libopenpty.h
 
 AM_CFLAGS=-I$(top_srcdir)/include @AM_CFLAGS@
 
